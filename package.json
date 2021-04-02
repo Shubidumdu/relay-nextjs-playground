@@ -3,13 +3,27 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "yarn run relay && next dev",
     "build": "next build",
-    "start": "next start"
+    "start": "yarn run relay && next start",
+    "relay": "yarn run relay-compiler --schema schema.graphql --src ./"
   },
   "dependencies": {
+    "dotenv": "^8.2.0",
     "next": "10.1.2",
     "react": "17.0.2",
-    "react-dom": "17.0.2"
+    "react-dom": "17.0.2",
+    "react-relay": "^11.0.1"
+  },
+  "devDependencies": {
+    "@types/dotenv": "^8.2.0",
+    "@types/react": "^17.0.3",
+    "@types/react-relay": "^11.0.1",
+    "@types/relay-compiler": "^8.0.0",
+    "@types/relay-runtime": "^10.1.10",
+    "graphql": "^15.5.0",
+    "relay-compiler": "^11.0.1",
+    "relay-runtime": "^11.0.1",
+    "typescript": "^4.2.3"
   }
 }
