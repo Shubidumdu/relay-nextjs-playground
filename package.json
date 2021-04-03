@@ -6,14 +6,15 @@
     "dev": "yarn run relay && next dev",
     "build": "next build",
     "start": "yarn run relay && next start",
-    "relay": "yarn run relay-compiler --schema schema.graphql --src ./"
+    "relay": "yarn run relay-compiler --schema schema.graphql --src ./ --language typescript"
   },
   "dependencies": {
     "dotenv": "^8.2.0",
     "next": "10.1.2",
     "react": "17.0.2",
     "react-dom": "17.0.2",
-    "react-relay": "^11.0.1"
+    "react-relay": "^11.0.1",
+    "relay-runtime": "^11.0.1"
   },
   "devDependencies": {
     "@types/dotenv": "^8.2.0",
@@ -21,9 +22,11 @@
     "@types/react-relay": "^11.0.1",
     "@types/relay-compiler": "^8.0.0",
     "@types/relay-runtime": "^10.1.10",
+    "babel-plugin-preval": "^5.0.0",
+    "babel-plugin-relay": "^11.0.1",
     "graphql": "^15.5.0",
     "relay-compiler": "^11.0.1",
-    "relay-runtime": "^11.0.1",
+    "relay-compiler-language-typescript": "^13.0.9",
     "typescript": "^4.2.3"
   }
 }
